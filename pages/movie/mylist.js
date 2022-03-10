@@ -47,8 +47,6 @@ const MyListMovie = () => {
 			localStorage.getItem('next-movie-favourites')
 		);
 
-
-
 		if (movieFavourites) {
             movieFavourites.length > 0 ? (
                 setFavourites(movieFavourites)

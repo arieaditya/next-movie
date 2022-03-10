@@ -126,12 +126,12 @@ const MovieDetail = ({ data }) => {
 		const movieFavourites = JSON.parse(
 			localStorage.getItem('next-movie-favourites')
 		);
-
-        if (movieFavourites.filter(e => e.imdbID === movieData.imdbID).length > 0) {
-            setIsFavourite(false)
-        } else {
+        
+        movieFavourites ? (
+            movieFavourites.filter(e => e.imdbID === movieData.imdbID).length > 0 ? setIsFavourite(false) : setIsFavourite(true)
+        ) : (
             setIsFavourite(true)
-        }
+        )
 	}, [isFavourite]);
 
 	const addFavouriteMovie = () => {
@@ -142,8 +142,10 @@ const MovieDetail = ({ data }) => {
             Year = movieData.Year,
             imdbID = movieData.imdbID;
 
-        if (localStorage.getItem('next-movie-favourites') === null) {
+        if (localStorage.getItem('next-movie-favourites') === null || '') {
             newFavourite = [];
+            newFavourite.push({imdbID, Title, Poster, Year})
+            localStorage.setItem('next-movie-favourites', JSON.stringify(newFavourite))
         } else {
             // Parse the serialized data back into an array of objects
             newFavourite = JSON.parse(localStorage.getItem('next-movie-favourites'));
@@ -156,7 +158,7 @@ const MovieDetail = ({ data }) => {
                 // Push the new data onto the array
                 newFavourite.push({imdbID, Title, Poster, Year})
                 localStorage.setItem('next-movie-favourites', JSON.stringify(newFavourite))
-                // setIsFavourite(true)
+                // setIsFavourite(false)
             }
            
         }
@@ -164,7 +166,6 @@ const MovieDetail = ({ data }) => {
 	};
 
     const removeFavouriteMovie = () => {
-        setIsFavourite(true)
         let movieID = movieData.imdbID
         console.log(movieID)
 		let items = JSON.parse(localStorage.getItem('next-movie-favourites'))
@@ -173,7 +174,7 @@ const MovieDetail = ({ data }) => {
         const newFavouriteList = items.filter((item) => item.imdbID !== movieID)
         console.log(newFavouriteList)
         localStorage.setItem('next-movie-favourites', JSON.stringify(newFavouriteList))
-        
+        setIsFavourite(true)
 	};
 
     return (
