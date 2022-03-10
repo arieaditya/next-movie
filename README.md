@@ -1,34 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# next-movie
 
-## Getting Started
+This is a Movies App built using Next.js and [The Open Movie Database (OMDB)](http://www.omdbapi.com/) API. 
 
-First, run the development server:
+## Demo
 
-```bash
-npm run dev
-# or
-yarn dev
+A live deployment of this app is available now. 
+[https://next-movie-pi.vercel.app/](https://next-movie-pi.vercel.app/)
+
+## Installation 
+
+Clone and install the dependencies for `next-movie` locally:
+
+```bash 
+  git clone https://github.com/arieaditya/next-movie
+  cd next-movie
+  yarn
 ```
+## Quick setup
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. Take a copy of .env.example and re-name to .env
+2. Get your OMDB API key
+4. Enter the details into the .env file
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Running locally
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+* `yarn dev`: dev build
+* `yarn build`: production build
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Tech Stack
 
-## Learn More
+Built with:
 
-To learn more about Next.js, take a look at the following resources:
+* Next.js
+* emotion.sh
+* axios
+* Material UI
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contributing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Contributions are always welcome! 
 
-## Deploy on Vercel
+For large changes, please file an issue to discuss your proposed changes with us before working on a PR :)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Authors
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [@arieadityan](https://github.com/arieaditya)
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
