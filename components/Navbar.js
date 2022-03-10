@@ -43,6 +43,9 @@ const GridRight = styled(Grid)`
 
 const WrapperLogo = styled.div`
     cursor: pointer;
+    span {
+        font-weight: 700;
+    }
 `;
 
 const NavbarLinkDesktop = styled.div`
@@ -69,7 +72,7 @@ const Navbar = () => {
                     </Grid>
                     <GridCenter item xs={6} md={4}>
                         <Link href="/" passHref>
-                            <a>Next Movies</a>
+                            <a>📽&nbsp;&nbsp;<b>Next Movies</b></a>
                         </Link>
                     </GridCenter>
                     <Grid item xs={3}></Grid>
@@ -79,14 +82,13 @@ const Navbar = () => {
                     <Grid item xs={6} md={6} lg={6}>
                         <Link href="/">
                             <WrapperLogo>
-                                <span>Next Movies</span>
+                                <span>📽&nbsp;&nbsp;Next Movies</span>
                             </WrapperLogo>
                         </Link>
                     </Grid>
                     <GridRight item xs={6} md={6} lg={6}>
                         <NavbarLinkDesktop>
-                            <Link href="/">Homepage</Link>
-                            <Link href="/movie/mylist">My List Movie</Link>
+                            <Link href="/movie/mylist" passHref>My List Movie</Link>
                         </NavbarLinkDesktop>
                     </GridRight>
                 </GridContainer>

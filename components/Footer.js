@@ -3,7 +3,6 @@ import styled from '@emotion/styled'
 
 const CopyrightWrapper = styled.div`
     bottom: 0;
-    position: absolute;
     display: block;
     left: 0;
     right: 0;

@@ -12,9 +12,7 @@ const MoviePoster = styled.div`
     overflow: hidden;
     position: relative;
     width: 100%;
-    @media (max-width: 425px) {
-        margin-bottom: 30px;
-    }
+    margin-bottom: 30px;
 `;
 
 const WrapperCard = styled.div`

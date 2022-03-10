@@ -10,7 +10,7 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
 const Section = styled.section`
-    height: 100vh;
+    height: 100%;
 `;
 
 const Main = styled.main`
@@ -31,6 +31,7 @@ const WrapperPagination = styled.div`
 	margin: 0 auto;
 	display: block;
 	margin-bottom: 50px;
+	margin-top: 20px;
 `;
 
 const CustomPagination = styled(Pagination)`
